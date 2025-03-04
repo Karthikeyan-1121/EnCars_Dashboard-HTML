@@ -6,7 +6,7 @@
 <head>
     <base href="">
     <meta charset="utf-8" />
-    <title>EnCars</title>
+    <title>EnCars - UAT</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link rel="canonical" href="" />
@@ -29,297 +29,7 @@
     <link rel="stylesheet" href="/admins/css/popup-lightbox.css" />
     <link rel="stylesheet" href="/admins/frontend/css/animate.css">
     <link rel="stylesheet" href="/admins/frontend/css/custom-style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
 
-        .message {
-            color: #fff;
-            background-color: #e74c3c;
-            /* Red background for alert messages */
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .rating-box {
-            width: 230px;
-            height: 130px;
-            margin-right: auto;
-            margin-left: auto;
-            background-color: #FBC02D;
-            color: #fff
-        }
-
-        .rating-label {
-            font-weight: bold
-        }
-
-        .rating-bar {
-            width: 300px;
-            padding: 8px;
-            border-radius: 5px
-        }
-
-        .bar-container {
-            width: 100%;
-            background-color: #f1f1f1;
-            text-align: center;
-            color: white;
-            border-radius: 20px;
-            cursor: pointer;
-            margin-bottom: 5px
-        }
-
-        .bar-5 {
-            width: 70%;
-            height: 13px;
-            background-color: #FBC02D;
-            border-radius: 20px
-        }
-
-        .bar-4 {
-            width: 30%;
-            height: 13px;
-            background-color: #FBC02D;
-            border-radius: 20px
-        }
-
-        .bar-3 {
-            width: 20%;
-            height: 13px;
-            background-color: #FBC02D;
-            border-radius: 20px
-        }
-
-        .bar-2 {
-            width: 10%;
-            height: 13px;
-            background-color: #FBC02D;
-            border-radius: 20px
-        }
-
-        .bar-1 {
-            width: 0%;
-            height: 13px;
-            background-color: #FBC02D;
-            border-radius: 20px
-        }
-
-        td {
-            padding-bottom: 10px
-        }
-
-        .star-active {
-            color: #FBC02D;
-            margin-top: 10px;
-            margin-bottom: 10px
-        }
-
-        .star-active:hover {
-            color: #F9A825;
-            cursor: pointer
-        }
-
-        .star-inactive {
-            color: #CFD8DC;
-            margin-top: 10px;
-            margin-bottom: 10px
-        }
-
-        .blue-text {
-            color: #0091EA
-        }
-
-        .content {
-            font-size: 18px
-        }
-
-        .profile-pic {
-            width: 90px;
-            height: 90px;
-            border-radius: 100%;
-            margin-right: 30px
-        }
-
-        .pic {
-            width: 80px;
-            height: 80px;
-            margin-right: 10px
-        }
-
-        .vote {
-            cursor: pointer
-        }
-
-
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 9999;
-        }
-
-        .lightbox .lightbox-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .lightbox .lightbox-content {
-            position: relative;
-            display: inline-block;
-            background: #fff;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        .lightbox img {
-            display: block;
-            max-width: 100%;
-            max-height: 100%;
-        }
-
-        .close-lightbox {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background: red;
-            color: white;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-        }
-
-        select {
-            width: 3.5rem;
-            height: 2rem;
-            border: 1px solid grey;
-            border-radius: 5px;
-            background-color: #f5f5f5;
-        }
-
-        #requestCar_select {
-            width: 9rem;
-            height: 2rem;
-            border: 1px solid grey;
-            border-radius: 5px;
-            background-color: #f5f5f5;
-            outline: 0;
-        }
-
-        #requestCar_filter input {
-            border: 1px solid grey;
-            border-radius: 5px;
-            height: 2rem;
-            width: 150px;
-            padding: 5px 5px 5px 5px;
-            outline: 0;
-            background-color: #f5f5f5;
-            margin-right: 20px;
-        }
-
-        td {
-            text-align: center;
-        }
-
-        .campaign-img {
-            /* margin-top:10px; */
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            border: start;
-        }
-
-        .scroll-textarea {
-            overflow-y: auto;
-            resize: none;
-        }
-
-        .rounded-top-left {
-            padding: 10px;
-            /* border:1px solid green; */
-        }
-
-        .small-icon {
-            width: 50px;
-            height: 50px;
-        }
-
-        .custom-select {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .custom-select select {
-            width: 100%;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            padding-right: 35px;
-            height: 45px;
-        }
-
-        .custom-select i {
-            position: absolute;
-            right: 10px;
-            pointer-events: none;
-        }
-
-
-        .is-invalid {
-            border: 2px solid red !important;
-        }
-
-        .confirmation-popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .popup-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .popup-content {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            z-index: 1001;
-        }
-
-        .popup-buttons {
-            margin-top: 10px;
-        }
-
-        .popup-buttons button {
-            margin: 5px;
-        }
-    </style>
 </head>
 
 <body id="kt_body"
@@ -328,10 +38,10 @@
     <div class="d-flex flex-column flex-root">
         <div class="page d-flex flex-row flex-column-fluid">
 
-            <div id="kt_aside" class="aside bg-secondary aside-hoverable" data-kt-drawer="true"
-                data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}"
-                data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}"
-                data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
+            <div id="kt_aside" class="aside aside-hoverable" data-kt-drawer="true" data-kt-drawer-name="aside"
+                data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true"
+                data-kt-drawer-width="{default:'200px', '300px': '250px'}" data-kt-drawer-direction="start"
+                data-kt-drawer-toggle="#kt_aside_mobile_toggle">
                 <div class="aside-logo flex-column-auto" id="kt_aside_logo">
                     <a href="#">
                         <img alt="Logo" src="/admins/EnCars_Fav.png" />
@@ -366,7 +76,7 @@
                             id="#kt_aside_menu" data-kt-menu="true">
                             <!-- Main menu -->
                             <div class="menu-item">
-                                <a class="menu-link active" href="">
+                                <a class="menu-link" href="">
                                     <span class="menu-icon">
                                         <span class="svg-icon svg-icon-2">
                                             <i class="fas fa-home text-primary fs-5"></i>
@@ -407,7 +117,7 @@
                             </div>
                             <!-- 2nd menu -->
                             <div data-kt-menu-trigger="click" class="menu-item menu-accordion hover">
-                                <span class="menu-link">
+                                <span class="menu-link active">
                                     <span class="menu-icon">
                                         <span class="svg-icon svg-icon-2">
                                             <i class="fas fa-donate text-success fs-5"></i>
@@ -416,6 +126,7 @@
                                     <span class="menu-title">Cars</span>
                                     <span class="menu-arrow"></span>
                                 </span>
+
                                 <div class="menu-sub menu-sub-accordion menu-active-bg">
                                     <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                         <div class="menu-item">
@@ -456,7 +167,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
+                        <div class="d-flex align-items-center justify-content-between flex-lg-grow-1">
                             <div class="d-flex align-items-stretch" id="kt_header_nav">
                                 <div class="header-menu align-items-stretch" data-kt-drawer="true"
                                     data-kt-drawer-name="header-menu"
@@ -464,7 +175,9 @@
                                     data-kt-drawer-width="{default:'200px', '300px': '250px'}"
                                     data-kt-drawer-direction="end" data-kt-drawer-toggle="#kt_header_menu_mobile_toggle"
                                     data-kt-place="true" data-kt-place-mode="prepend"
-                                    data-kt-place-parent="{default: '#kt_body', lg: '#kt_header_nav'}"></div>
+                                    data-kt-place-parent="{default: '#kt_body', lg: '#kt_header_nav'}">
+                                    <h1>EnCars</h1>
+                                </div>
                             </div>
                             <div class="d-flex align-items-stretch flex-shrink-0">
                                 <div class="d-flex align-items-stretch flex-shrink-0">
@@ -584,74 +297,152 @@
                             </div>
                         </div>
 
-                        <div class="row reQ gy-4">
-                            <div class="col-lg-3 col-md-4">
-                                <div class="recData">
-                                    <p>Brand Name</p>
-                                    <p class="datA"><strong>Honda</strong></p>
+                        <form method="post" class="showData" action="javascript:void(0)">
+                            <div class="row reQ">
+                                <div class="col-lg-3 col-md-4 form-group">
+                                    <label class="recData">
+                                        <p>Brand Name</p>
+                                    </label>
+                                    <select class=" form-control" type="drop-down" id="FormControlSelect1">
+                                        <option value="0">Select</option>
+                                        <option value="1" selected>Honda</option>
+                                        <option value="2">Brand 02</option>
+                                        <option value="3">Brand 03</option>
+                                        <option value="4">Brand 04</option>
+                                        <option value="5">Brand 05</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 form-group">
+                                    <label class="recData">
+                                        <p>Model</p>
+                                    </label>
+                                    <select class="form-control" type="drop-down" id="FormControlSelect2">
+                                        <option value="0" selected>City</option>
+                                        <option value="1">Model 01</option>
+                                        <option value="2">Model 02</option>
+                                        <option value="3">Model 03</option>
+                                        <option value="4">Model 04</option>
+                                        <option value="5">Model 05</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 form-group">
+                                    <label class="recData">
+                                        <p>Fuel Type</p>
+                                    </label>
+                                    <select class="form-control" type="drop-down" id="FormControlSelect3">
+                                        <option value="0">Select</option>
+                                        <option value="1" selected>Petrol</option>
+                                        <option value="2">Diesel</option>
+                                        <option value="3">CNG</option>
+                                        <option value="4">Hybrid</option>
+                                        <option value="5">Electric</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 form-group">
+                                    <label class="recData">
+                                        <p>Transmission</p>
+                                    </label>
+                                    <select class="form-control" type="drop-down" id="FormControlSelect4">
+                                        <option value="0">Select</option>
+                                        <option value="1" selected>Automatic</option>
+                                        <option value="2">Manual</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 form-group">
+                                    <label class="recData">
+                                        <p>Power Delivery</p>
+                                    </label>
+                                    <select class="form-control" type="drop-down" id="FormControlSelect5">
+                                        <option value="0">Select</option>
+                                        <option value="1" selected>Front Wheel drive</option>
+                                        <option value="2">Rear Wheel drive</option>
+                                        <option value="3">All Wheel Drive</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 form-group">
+                                    <label class="recData">
+                                        <p>Seating Capacity</p>
+                                    </label>
+                                    <select class="form-control" type="drop-down" id="FormControlSelect6">
+                                        <option value="0">Select</option>
+                                        <option value="1" selected>5</option>
+                                        <option value="2">6</option>
+                                        <option value="3">7</option>
+                                        <option value="4">8</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 form-group">
+                                    <label class="recData">
+                                        <p>Body Type</p>
+                                    </label>
+                                    <select class="form-control" type="drop-down" id="FormControlSelect8">
+                                        <option value="0">Select</option>
+                                        <option value="1" selected>Sedan</option>
+                                        <option value="2">Compact Sedan</option>
+                                        <option value="3">SUV</option>
+                                        <option value="4">Compact SUV</option>
+                                        <option value="5">Hatchback</option>
+                                        <option value="6">MUV/MPV</option>
+                                        <option value="7">Convertible</option>
+                                        <option value="8">Coupe</option>
+                                        <option value="9">Minivan</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-4 form-group">
+                                    <label class="recData">
+                                        <p>Usage of car</p>
+                                    </label>
+                                    <select class="form-control" type="drop-down" id="FormControlSelect7">
+                                        <option value="0">Select</option>
+                                        <option value="1" selected>Daily Usage</option>
+                                        <option value="2">Occasional Usage</option>
+                                    </select>
+                                </div>
+
+
+
+                                <div class="col-lg-3 col-md-4 form-group">
+                                    <label class="recData">
+                                        <p>Price Range</p>
+                                    </label>
+                                    <select class="form-control" type="drop-down" id="FormControlSelect9">
+                                        <option value="0">Select</option>
+                                        <option value="1" selected>₹3,00,000 to ₹5,00,000</option>
+                                        <option value="2">5L to 10L</option>
+                                        <option value="3">10L to 15L</option>
+                                        <option value="4">15L to 20L</option>
+                                        <option value="5">20L to 50L</option>
+                                        <option value="6">50L to 1Cr</option>
+                                        <option value="7">1Cr and above</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-12 mt-3 form-group">
+                                    <label class="recData">
+                                        <p><strong>Comments</strong></p>
+                                    </label>
+                                    <textarea id="contactform_remarks" minlength="5" maxlength="1000"
+                                        class="form-control input-message placeholder pt-2"
+                                        placeholder="Message that you got from client" rows="3" name="messages"
+                                        required="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore quibusdam assumenda veritatis similique, nesciunt illo doloremque facere sequi animi perferendis.
+                                    </textarea>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <button id="submitEdit" name="submit" type="submit" value="Send"
+                                        class="btn mt-4">Edit Request</button>
+                                    <button id="submit" name="submit" type="submit" value="Send"
+                                        class="btn w-100 mt-4">Update Request</button>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-4">
-                                <div class="recData">
-                                    <p>Model</p>
-                                    <p class="datA"><strong>City</strong></p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4">
-                                <div class="recData">
-                                    <p>Fuel Type</p>
-                                    <p class="datA"><strong>Petrol</strong></p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4">
-                                <div class="recData">
-                                    <p>Transmission Type</p>
-                                    <p class="datA"><strong>Automatic</strong></p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4">
-                                <div class="recData">
-                                    <p>Drive Type</p>
-                                    <p class="datA"><strong class="d-inline-block">FWD (Front Wheel Drive)</strong></p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4">
-                                <div class="recData">
-                                    <p>Seating Capacity</p>
-                                    <p class="datA"><strong>5</strong></p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4">
-                                <div class="recData">
-                                    <p>Body Type</p>
-                                    <p class="datA"><strong>Sedan</strong></p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-4">
-                                <div class="recData">
-                                    <p>Usage of car</p>
-                                    <p class="datA"><strong>Daily Usage</strong></p>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="recData">
-                                    <p>Price Range</p>
-                                    <p class="datA">
-                                        <strong class="d-inline-block">₹ 3,00,000</strong>
-                                        to
-                                        <strong class="d-inline-block">₹ 5,00,000</strong>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="d-block mt-4">
-                                    <p class="mb-1"><strong>Comments</strong></p>
-                                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
-                                        quibusdam assumenda veritatis similique, nesciunt illo doloremque facere sequi
-                                        animi perferendis.</p>
-                                </div>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                     <hr>
                 </section>
@@ -732,8 +523,7 @@
                                         </select>
                                     </div>
                                     <div class="col-lg-8">
-                                        <button type="submit" id="approveBtn"
-                                            class="btn btn-success flex-grow-1 w-100 mb-5"
+                                        <button type="submit" id="approveBtn" class="btn flex-grow-1 w-100 mb-5"
                                             onclick="setAction('approve')">Upadte Status
                                         </button>
                                     </div>
@@ -762,6 +552,31 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="/admins/js/jquery.popup.lightbox.js"></script>
     <script src="/admins/plugins/global/moment-with-locales.min.js.map"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const submitButton = document.getElementById("submitEdit");
+            const formElement = document.querySelector("form");
+
+            submitButton.addEventListener("click", function () {
+                formElement.classList.remove("showData");
+            });
+
+            function toggleSelectDisabled() {
+                const formGroups = document.querySelectorAll(".form-group .form-control");
+                const formHasShowData = formElement.classList.contains("showData");
+
+                formGroups.forEach(select => {
+                    select.disabled = formHasShowData;
+                });
+            }
+
+            const observer = new MutationObserver(toggleSelectDisabled);
+            observer.observe(formElement, { attributes: true, attributeFilter: ["class"] });
+            toggleSelectDisabled(); // Run on page load
+        });
+
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

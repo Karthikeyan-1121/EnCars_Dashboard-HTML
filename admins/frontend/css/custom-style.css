@@ -7,14 +7,31 @@
     max-width: 100%;
 }
 
-.recData {
-    margin-bottom: 10px;
-}
-
 hr {
     margin: unset;
     margin-top: 12px;
     color: rgb(173, 210, 183);
+}
+
+.aside {
+    background-color: white;
+    border-right: 1px solid grey;
+}
+
+.menu-item .menu-link {
+    margin: 0 10px;
+}
+
+.menu-item .active {
+    background-color: #0d9448;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.menu-item .active i,
+.menu-item .active .menu-title,
+.menu-item .active .menu-arrow {
+    color: white !important;
 }
 
 
@@ -69,6 +86,10 @@ hr {
     background-color: rgb(239, 254, 244);
 }
 
+.aboutUser .recData {
+    margin-bottom: 10px;
+}
+
 .recData p {
     font-size: .9rem;
     color: #4141419c;
@@ -95,6 +116,45 @@ hr {
     padding: 20px;
     margin: 0 2px;
 }
+
+.expecTation .reQ .form-control {
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.expecTation .reQ .form-group {
+    margin-bottom: 30px;
+}
+
+.expecTation .showData .reQ .form-control {
+    background-color: unset;
+    border: unset;
+    padding: unset;
+    margin-top: -4px;
+}
+
+.expecTation .showData .reQ .form-group textarea {
+    padding: 10px 0;
+}
+
+.expecTation #submitEdit {
+    background-color: #A1A5B7;
+    color: black;
+    text-align: right;
+}
+
+.expecTation .showData #submit {
+    display: none;
+}
+
+.expecTation #submit {
+    background-color: #0d9448;
+    color: white;
+}
+
+/* ======================= Select ====================== */
+
+/* ======================= Select ====================== */
 
 /* remarks */
 .remarkS .form-select {
@@ -133,6 +193,11 @@ hr {
 #confirmSubmit,
 #cancelSubmit {
     width: 49%
+}
+
+#approveBtn {
+    background-color: #0d9448;
+    color: white;
 }
 
 .popup-buttons button {

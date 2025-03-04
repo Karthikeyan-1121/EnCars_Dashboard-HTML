@@ -12877,8 +12877,7 @@ select {
 }
 
 .sindotgen .support .fr {
-    float: right;
-    !important;
+    float: right !important;
 }
 
 
@@ -12997,8 +12996,7 @@ select {
 }
 
 .mycampaign .support .fr {
-    float: right;
-    !important;
+    float: right !important;
 }
 
 .mainmenu2 li a .active {
