@@ -12,7 +12,14 @@
     <link rel="canonical" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="/admins/EnCars_Fav.png" type="image/png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
     <link href="/admins/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="/admins/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css" />
@@ -21,6 +28,7 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="/admins/css/popup-lightbox.css" />
     <link rel="stylesheet" href="/admins/frontend/css/animate.css">
+    <link rel="stylesheet" href="/admins/frontend/css/custom-style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -485,121 +493,257 @@
                     </div>
                 </div>
                 <!-- dashboard content bottom -->
-                <h5 class="ms-3 fw-bold text-dark">
-                    Car Requests
-                    <span class="text-primary"><a href=""> / Requests List / </a></span>
-                    <small class="text-muted">Details</small>
-                </h5>
-                <div class="container mt-0 py-5">
-                    <form id="campaignForm" action="" method="POST">
 
-                        <div class="row g-3 rounded-top-left rounded">
-                            <div class="col-lg-6">
-                                <div class="mt-3">
-                                    <label class="form-label">Name</label>
-                                    <input type="text" name="camp_title" class="form-control"
-                                        placeholder="Enter Your Campaign Title or Heading Here" value="" required>
-                                </div>
-                                <div class="mt-3">
-                                    <label class="form-label">Email</label>
-                                    <input type="text" name="camp_title" class="form-control"
-                                        placeholder="Enter Your Campaign Title or Heading Here" value="" required>
-                                </div>
-                                <div class="row mt-3 py-5">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Mobile</label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Profession</label>
-                                        <input type="text" name="end_date" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="row mt-3 py-5">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Brand Name</label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Brand Model</label>
-                                        <input type="text" name="end_date" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="row mt-3 py-5">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Fuel Type</label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Transmission</label>
-                                        <input type="text" name="end_date" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="row mt-3 py-5">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Drive Type</label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Seat Capacity</label>
-                                        <input type="text" name="end_date" class="form-control" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
 
-                                <div class="row mt-3 py-5">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Usage</label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Body Type</label>
-                                        <input type="text" name="end_date" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="row mt-3 py-5">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Minimum Amount</label>
-                                        <input type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label class="form-label">Maximun Amount</label>
-                                        <input type="text" name="end_date" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="mt-3">
-                                    <label class="form-label">Status</label>
-                                    <select></select>
-                                </div>
-                                <div class="mt-3">
-                                    <label class="form-label">Comments</label>
-                                    <textarea class="form-control scroll-textarea" rows="1"
-                                        placeholder="Type your remarks or comments here" name="remark" maxlength="300"
-                                        value="" required></textarea>
-                                </div>
-                                <div class="mt-3">
-                                    <label class="form-label">Remarks</label>
-                                    <textarea class="form-control scroll-textarea" rows="1"
-                                        placeholder="Type your remarks or comments here" name="remark" maxlength="300"
-                                        value="" required></textarea>
-                                </div>
-                                <input type="hidden" id="actionInput" name="action" value="">
-                                <div class="mt-3 d-flex gap-2">
-                                    <button type="submit" id="approveBtn" class="btn btn-success flex-grow-1"
-                                        onclick="setAction('approve')">Approve</button>
-                                </div>
-                                <div class="mt-3 d-flex gap-2">
-                                    <button type="submit" id="holdBtn" class="btn btn-secondary flex-grow-1"
-                                        onclick="setAction('hold')">Hold</button>
-                                    <button type="submit" id="rejectBtn" class="btn btn-danger flex-grow-1"
-                                        onclick="setAction('reject')">Reject</button>
-                                </div>
 
+                <!-- ======================  Request info ======================  -->
+
+                <!-- Bread crumbs sec -->
+                <section class="breadCrumbs">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="fw-bold d-inline-flex text-dark">
+                                    <span>Car Requests</span>
+                                    <span> / <a href="">Requests List</a> / </span>
+                                    Request Information
+                                </h5>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <hr>
+                </section>
+
+                <!-- About User Sec -->
+                <section class="aboutUser">
+                    <div class="container-fluid">
+                        <div class="row py-5">
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Name</p>
+                                    <p class="datA"><strong>Karthikeyan E</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Occupation</p>
+                                    <p class="datA"><strong>UI / UX Designer</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Contact Number</p>
+                                    <p class="datA"><strong>952412100</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Email ID</p>
+                                    <p class="datA"><strong>karthikeyan.e@grouppal.in</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Referral Name</p>
+                                    <p class="datA"><strong>Self</strong></p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Referral Contact / EC ID</p>
+                                    <p class="datA"><strong>-</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Expectation Sec -->
+                <section class="expecTation">
+                    <div class="container-fluid exPect">
+                        <div class="row py-4">
+                            <div class="col-12">
+                                <div class="d-flex flex-wrap justify-content-between align-items-end">
+                                    <div class="mb-3">
+                                        <p class="mb-1">Requested</p>
+                                        <h3 class="d-inline">Specific Model / Expert Suggestions</h3>
+                                    </div>
+                                    <div class="cStatus cStatus-reQ">
+                                        <span class="d-inline">Requested</span>
+                                        <span class="d-none">Reached Customer</span>
+                                        <span class="d-none">No Answer</span>
+                                        <span class="d-none">Request Cancled</span>
+                                        <span class="d-none">Request Closed</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row reQ gy-4">
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Brand Name</p>
+                                    <p class="datA"><strong>Honda</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Model</p>
+                                    <p class="datA"><strong>City</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Fuel Type</p>
+                                    <p class="datA"><strong>Petrol</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Transmission Type</p>
+                                    <p class="datA"><strong>Automatic</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Drive Type</p>
+                                    <p class="datA"><strong class="d-inline-block">FWD (Front Wheel Drive)</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Seating Capacity</p>
+                                    <p class="datA"><strong>5</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Body Type</p>
+                                    <p class="datA"><strong>Sedan</strong></p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4">
+                                <div class="recData">
+                                    <p>Usage of car</p>
+                                    <p class="datA"><strong>Daily Usage</strong></p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="recData">
+                                    <p>Price Range</p>
+                                    <p class="datA">
+                                        <strong class="d-inline-block">₹ 3,00,000</strong>
+                                        to
+                                        <strong class="d-inline-block">₹ 5,00,000</strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-block mt-4">
+                                    <p class="mb-1"><strong>Comments</strong></p>
+                                    <p class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore
+                                        quibusdam assumenda veritatis similique, nesciunt illo doloremque facere sequi
+                                        animi perferendis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </section>
+
+
+                <!-- Track (log) -->
+                <section class="traCk">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="mt-5">Recent Tracks</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <table class="table mb-0">
+                                    <thead>
+                                        <th class="coL-one">Date & Time</th>
+                                        <th class="coL-two">Remarks</th>
+                                        <th class="coL-three">Updated by</th>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td class="coL-one">01-02-2025 <br> 12:50pm</td>
+                                            <td class="coL-two">Form Submitted</td>
+                                            <td class="coL-three">User</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coL-one">02-02-2025 <br> 04:50pm</td>
+                                            <td class="coL-two"><strong>Status :</strong> Lorem ipsum dolor sit, amet
+                                                consectetur adipisicing
+                                                elit. Consequuntur eligendi molestiae illo aspernatur praesentium
+                                                doloribus dolores deleniti at nisi saepe sapiente cupiditate
+                                                necessitatibus, totam, aliquam officia nulla officiis explicabo neque?
+                                            </td>
+                                            <td class="coL-three">Karthikeyan E</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coL-one">03-02-2025 <br> 11:50am</td>
+                                            <td class="coL-two"><strong>Status :</strong> Lorem ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Tenetur
+                                                praesentium illum rerum veritatis eos dicta, assumenda suscipit sunt
+                                                deleniti rem!</td>
+                                            <td class="coL-three">Karthikeyan E</td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </section>
+
+                <!-- Remarks updated -->
+                <section class="remarkS pt-5 pb-5">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>Update Status</h4>
+                            </div>
+                            <form id="campaignForm" action="" method="POST">
+                                <div class="row">
+                                    <div class="col-md-12 form-group mb-5">
+                                        <textarea id="contactform_remarks" minlength="5" maxlength="1000"
+                                            class="form-control input-message placeholder"
+                                            placeholder="Message that you got from client" rows="4" name="messages"
+                                            required> </textarea>
+                                    </div>
+                                    <div class="col-lg-4 mb-5">
+                                        <select class="form-select h-100" aria-label="Default select example">
+                                            <option selected>Open this select menu</option>
+                                            <option value="1">Reached Customer</option>
+                                            <option value="2">No Answer</option>
+                                            <option value="3">Request cancelled</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <button type="submit" id="approveBtn"
+                                            class="btn btn-success flex-grow-1 w-100 mb-5"
+                                            onclick="setAction('approve')">Upadte Status
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
 
             </div>
         </div>
@@ -618,6 +762,7 @@
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="/admins/js/jquery.popup.lightbox.js"></script>
     <script src="/admins/plugins/global/moment-with-locales.min.js.map"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let currentUrl = window.location.pathname;
@@ -773,7 +918,7 @@
                 popupShown = true;
 
                 const actionText = {
-                    "approve": "Are you sure you want to approve this campaign?",
+                    "approve": "Are you sure you want to update the status?",
                     "hold": "Are you sure you want to hold this campaign?",
                     "reject": "Are you sure you want to reject this campaign?"
                 };
@@ -814,7 +959,6 @@
         });
 
     </script>
-
 
 </body>
 

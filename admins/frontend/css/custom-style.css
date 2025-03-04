@@ -1,0 +1,140 @@
+/* Universal CSS */
+* {
+    font-family: "Roboto", serif;
+}
+
+.row>* {
+    max-width: 100%;
+}
+
+.recData {
+    margin-bottom: 10px;
+}
+
+hr {
+    margin: unset;
+    margin-top: 12px;
+    color: rgb(173, 210, 183);
+}
+
+
+/* breadCrumbs sec */
+.breadCrumbs h5 span,
+.breadCrumbs h5 span a {
+    font-size: 1rem;
+    color: #A1A5B7;
+}
+
+.breadCrumbs h5 span a:hover {
+    text-decoration: underline !important;
+}
+
+.breadCrumbs h5 {
+    font-size: 1rem;
+}
+
+.cStatus span {
+    color: white;
+}
+
+.cStatus {
+    padding: 5px 15px;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.cStatus-reQ {
+    background-color: rgb(0, 115, 128);
+}
+
+.cStatus-reacH {
+    background-color: rgb(5, 113, 106);
+}
+
+.cStatus-uNreacH {
+    background-color: rgb(165, 111, 11);
+}
+
+.cStatus-cAreQ {
+    background-color: rgb(165, 11, 11);
+}
+
+.cStatus-closeD {
+    background-color: rgb(0, 129, 11);
+}
+
+/* About User Sec */
+.aboutUser {
+    background-color: rgb(239, 254, 244);
+}
+
+.recData p {
+    font-size: .9rem;
+    color: #4141419c;
+    margin: unset;
+}
+
+.recData .datA {
+    font-size: 1.15rem;
+    color: #414141;
+}
+
+/* Expectation Sec */
+.expecTation {
+    margin-top: 20px;
+}
+
+.expecTation .exPect {
+    padding-bottom: 20px;
+}
+
+.expecTation .reQ {
+    background-color: rgb(252, 255, 253);
+    border: 1px solid rgb(225, 250, 209);
+    padding: 20px;
+    margin: 0 2px;
+}
+
+/* remarks */
+.remarkS .form-select {
+    font-weight: 400;
+}
+
+/* Tracks */
+.traCk {
+    background-color: aliceblue;
+}
+
+.traCk table td {
+    text-align: left;
+}
+
+.traCk table th {
+    font-weight: 600;
+}
+
+.traCk .coL-one {
+    width: 10%;
+    border-bottom: 1px solid rgb(234, 231, 231);
+}
+
+.traCk .coL-two {
+    width: 70%;
+    border-bottom: 1px solid rgb(234, 231, 231);
+}
+
+.traCk .coL-three {
+    width: 20%;
+    border-bottom: 1px solid rgb(234, 231, 231);
+}
+
+/* update confirmation popup */
+#confirmSubmit,
+#cancelSubmit {
+    width: 49%
+}
+
+.popup-buttons button {
+    margin: unset !important;
+}
